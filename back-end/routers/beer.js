@@ -10,10 +10,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/all', (req, res) => {
-
   Beer.find()
     .then(beer => {
-      res.json(beer)})
+      res.json(beer.map(a => a.name))})
     .catch(err => res.status(400).json({error: err }))
 });
 
