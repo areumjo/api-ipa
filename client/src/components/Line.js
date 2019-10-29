@@ -10,7 +10,7 @@ class Line extends React.Component {
   componentDidMount() {
     const node = this.ref.current;
     const { xScale, yScale, data, lineGenerator } = this.props;
-
+    // console.log('data:', data)
     const initialData = data.map(d => ({
       name: d.name,
       value: 0
@@ -24,19 +24,6 @@ class Line extends React.Component {
       .attr('stroke-width', 2)
       .attr('fill', 'none')
       .attr('d', lineGenerator);
-
-    // select(node)
-    //   .selectAll('circle')
-    //   .data(data)
-    //   .enter()
-    //   .append('circle')
-    //   .attr('class', 'circle')
-    //   .attr('stroke', '#ECC417')
-    //   .attr('stroke-width', '2')
-    //   .attr('fill', '#333')
-    //   .attr('r', 3)
-    //   .attr('cx', (d, key) => xScale(key))
-    //   .attr('cy', d => yScale(d.count));
 
     this.updateChart()
   }

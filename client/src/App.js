@@ -41,8 +41,12 @@ function App() {
         <p>API-IPA <span role="img">🍺</span></p>
       </header>
       {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer}/> : <Loader active/>}
-      {callBeer.length>0 && <BeerCard callBeer={callBeer}/>}
-      {callBeer.length>0 && <Chart callBeer={callBeer}/>}
+      <div className="divided">
+        {callBeer.length>0 && <Chart callBeer={callBeer}/>}
+        {callBeer.length>0 && <BeerCard callBeer={callBeer}/>}
+      </div>
+      
+      
     </div>
   );
 }

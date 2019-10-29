@@ -6,7 +6,7 @@ const BeerCard = props => {
   return (
     <div className="beer-card">
       <h3>{beerData.name}</h3>
-      <img src={beerData.beer_img} alt="beer image" />
+      <img src={beerData.beer_img} alt="beer" />
       <p>{beerData.beer_style}</p>
       <p><span>Description: </span>{beerData.desc}</p>
       
