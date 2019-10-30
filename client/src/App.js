@@ -3,12 +3,10 @@ import axios from 'axios';
 
 import Selection from './components/Selection.js';
 import BeerCard from './components/BeerCard.js';
-import Chart from './components/Chart.js';
+import Chart from './components/charts/Chart.js';
 import './App.css';
 import { Loader } from 'semantic-ui-react';
 
-
-// search by beer-name : URL encode '%20'
 function App() {
 
   const [allBeer, setAllBeer] = useState([]);
@@ -21,7 +19,6 @@ function App() {
       .then(data => {
         setAllBeer(data.data);
       })
-      
       .catch(err => console.log(err));
   }, []);
 
@@ -45,8 +42,6 @@ function App() {
         {callBeer.length>0 && <Chart callBeer={callBeer}/>}
         {callBeer.length>0 && <BeerCard callBeer={callBeer}/>}
       </div>
-      
-      
     </div>
   );
 }

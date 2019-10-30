@@ -9,7 +9,7 @@ const Chart = props => {
     Object.entries(data['avg_score_year']).filter(([k,v]) => !(v === null)));
   // console.log(data['avg_score_year']); // {2016: 4.615, 2017: 4.225128205128205, 2018: 4.149375, 2019: 4.225}
   let output = Object.entries(data['avg_score_year']).map(([name, value]) => ({name,value}));
-  console.log(output); // [{ name: '2016', value: 4.615}, ... ]
+  // console.log(output); // [{ name: '2016', value: 4.615}, ... ]
 
   // *** d3 ***
   const parentWidth = 500;
@@ -21,9 +21,6 @@ const Chart = props => {
   const ticks = 5;
   const t = d3.transition().duration(2000);
 
-  // const xScale = d3.scaleBand()
-  //   .domain(output.map(d => d.name))
-  //   .rangeRound([0, width]).padding(0.1);
   const xScale = d3.scaleLinear()
     .domain(d3.extent(output, d => d.name))
     .range([0, width])
@@ -37,12 +34,12 @@ const Chart = props => {
 
   const lineGenerator = d3.line()
     .x(d => xScale(d.name))
-    .y(d => yScale(d.value))
-    .curve(d3.curveMonotoneX);
+    .y(d => yScale(d.value));
+    // .curve(d3.curveMonotoneX);
 
   return(
     <div>
-      <p>Average rating:</p>
+      <h3>Average rating:</h3>
       {/* <Line data={output} xScale={xScale} yScale={yScale} lineGenerator={lineGenerator} width={width} height={height}/> */}
       <svg
         className="lineChartSvg"

@@ -1,4 +1,4 @@
-# API-IPA
+# API-IPA 🍺
 - API using Node.js and MongDB
 - Information about IPA which is beer 🍺🍻
 - Progress @ Oct 27, 2019
@@ -9,3 +9,14 @@
   - Search beer by beer-name
 
   ![](assets/api-ipa-search-fn.png)
+
+- Line chart for yearly rating of selected beer
+  - Used `d3.js`
+
+  ![](assets/api-ipa-rating-chart.png)
+
+- Things to do next
+  - Add more data -- the number of rating so far
+  - Add more databases -- brewery and beer-style
+  - Axis text -- year, rating
+  - Make a new page for API call
