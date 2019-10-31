@@ -19,4 +19,10 @@
   - Add more data -- the number of rating so far
   - Add more databases -- brewery and beer-style
   - Axis text -- year, rating
-  - Make a new page for API call
+  - ~~Make a new page for API call~~
+    - Implement a form and text-GET-call JSON result
+
+- Added routes for API call and rating
+  - With `react-router-dom`
+
+  ![](assets/api-ipa-routes.png)

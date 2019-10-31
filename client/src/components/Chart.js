@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
-import Line from './Line.js';
-import XYAxis from './XYAxis.js';
+import Line from './charts/Line.js';
+import XYAxis from './charts/XYAxis.js';
 
 const Chart = props => {
   const data = props.callBeer[0];
