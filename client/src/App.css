@@ -54,3 +54,25 @@ h1, h2, h3, h4, h5 {
   display: flex;
   margin: 0 auto;
 } */
+
+.center {
+  margin: 50px auto;
+  max-width: 650px;
+}
+
+.ui.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.ui.input {
+  width: 500px;
+}
+
+.box {
+  max-width: 650px;
+  min-height: 650px;
+  border: 1px solid rgba(34,36,38,0.15);
+  color: rgba(0,0,0,.87);
+  border-radius: .28571429rem;
+}

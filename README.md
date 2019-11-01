@@ -20,7 +20,8 @@
   - Add more databases -- brewery and beer-style
   - Axis text -- year, rating
   - ~~Make a new page for API call~~
-    - Implement a form and text-GET-call JSON result
+    - Implement a form and text-GET-call JSON result --> editted to selection tool and it will show text API call after an user clicke submit button
+  - Deploy backend and replace http API address
 
 - Added routes for API call and rating
   - With `react-router-dom`
