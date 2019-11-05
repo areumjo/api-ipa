@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Loader, Form, Input, Button } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 import axios from 'axios';
 
 import Selection from './Selection.js';
@@ -39,30 +39,17 @@ const ApiCall = () => {
         <p>Try it now!</p>
       </div>
       <div className="center">
-        {/* <Form onSubmit={handleSubmit}>
-          <Input 
-            label='http://' 
-            placeholder='Beer name'
-            name='name'
-            value={beerName}
-            onChange={handleChange}
-          />
-          <Form.Button content='Submit' />
-        </Form> */}
-        {beer.length>0 && <label>http://localhost:5000/beer/{beer}</label>}
-        
+        <h2>Test API-API call</h2>        
         {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer} setApiState={setApiState}/> : <Loader active/>}
-        <Button onClick={handleSubmit}>Submit</Button>
-        <p>need a hint? try your favorite beer!</p>
+        {allBeer.length>0 && <Button onClick={handleSubmit}>Submit</Button>}
       </div>
       <div className="center">
-        <h2>Test API call</h2>
         <div className="box">
+          {/* {beer.length>0 && <label>http://localhost:5000/beer/{beer}</label>} */}
           {apiState.length>0 && <JsonCompo apiState={apiState}/>}
         </div>
       </div>
     </div>
-    
   )
 };
 
