@@ -14,7 +14,7 @@ const VisApp = props => {
 
   useEffect(() => {
     axios
-      .get('https://areumjo-api-ipa.herokuapp.com/beer/all')
+      .get('http://areumjo-api-ipa.herokuapp.com/beer/all')
       .then(data => {
         setAllBeer(data.data);
       })
@@ -23,7 +23,7 @@ const VisApp = props => {
 
   useEffect(() => {
     axios
-      .get(`https://areumjo-api-ipa.herokuapp.com/beer/${encodeURIComponent(beer)}`)
+      .get(`http://areumjo-api-ipa.herokuapp.com/beer/${encodeURIComponent(beer)}`)
       .then(data => {
         // console.log('callBeer:', data);
         setCallBeer(data.data);

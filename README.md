@@ -54,3 +54,8 @@
   - With `react-router-dom`
 
   ![](assets/api-ipa-routes.png)
+
+- Selection tool with deployed API-web address
+  - Fixed ticks from x-axis 
+
+  ![](assets/api-ipa-selection-d3.png)

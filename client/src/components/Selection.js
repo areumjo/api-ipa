@@ -16,10 +16,10 @@ const Selection = props => {
 
   return(
     <div style={{ margin: "50px 0" }}>
-      <p>Simply choose your favorite IPA</p>
+      <p>Simply choose or search your favorite IPA</p>
       <label className='input-label'>https://areumjo-api-ipa.herokuapp.com/beer/</label>
       <Dropdown
-        placeholder='Select Beer'
+        placeholder='Select || Search Beer'
         floating
         search
         selection

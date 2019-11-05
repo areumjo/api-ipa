@@ -18,7 +18,7 @@ const Chart = props => {
   const width = parentWidth - margins.left - margins.right;
   const height = 300 - margins.top - margins.bottom;
 
-  const ticks = 5;
+  const ticks = Object.keys(output).length;
   const t = d3.transition().duration(2000);
 
   const xScale = d3.scaleLinear()
