@@ -14,7 +14,7 @@ const VisApp = props => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/beer/all')
+      .get('https://areumjo-api-ipa.herokuapp.com/beer/all')
       .then(data => {
         setAllBeer(data.data);
       })
@@ -23,7 +23,7 @@ const VisApp = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/beer/${encodeURIComponent(beer)}`)
+      .get(`https://areumjo-api-ipa.herokuapp.com/beer/${encodeURIComponent(beer)}`)
       .then(data => {
         // console.log('callBeer:', data);
         setCallBeer(data.data);
@@ -37,7 +37,7 @@ const VisApp = props => {
       <div className="container">
         <h2>Visualize yearly rating of your favorite IPA <span>🍺</span></h2>
       </div>
-      {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer}/> : <Loader active/>}
+      {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer}/> : <Loader active>Loading</Loader>}
       {callBeer.length>0 && <Chart callBeer={callBeer}/>}
       {callBeer.length>0 && <BeerCard callBeer={callBeer}/>}
     </div>

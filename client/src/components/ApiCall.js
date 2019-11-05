@@ -14,7 +14,7 @@ const ApiCall = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/beer/all')
+      .get('http://areumjo-api-ipa.herokuapp.com/beer/all')
       .then(data => {
         setAllBeer(data.data);
       })
@@ -24,7 +24,7 @@ const ApiCall = () => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .get(`http://localhost:5000/beer/${beer}`)
+      .get(`http://areumjo-api-ipa.herokuapp.com/beer/${beer}`)
       .then(data => {
         console.log(data);
         setApiState(data.data);
@@ -39,16 +39,11 @@ const ApiCall = () => {
         <p>Try it now!</p>
       </div>
       <div className="center">
-        <h2>Test API-API call</h2>        
-        {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer} setApiState={setApiState}/> : <Loader active/>}
+        <h2>Test API-API call</h2>
+        {allBeer.length>0 ? <Selection allBeer={allBeer} setBeer={setBeer} setApiState={setApiState}/> : <Loader active>Loading</Loader>}
         {allBeer.length>0 && <Button onClick={handleSubmit}>Submit</Button>}
       </div>
-      <div className="center">
-        <div className="box">
-          {/* {beer.length>0 && <label>http://localhost:5000/beer/{beer}</label>} */}
-          {apiState.length>0 && <JsonCompo apiState={apiState}/>}
-        </div>
-      </div>
+        {apiState.length>0 && <JsonCompo apiState={apiState}/>}
     </div>
   )
 };

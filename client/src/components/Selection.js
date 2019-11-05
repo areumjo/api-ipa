@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dropdown} from 'semantic-ui-react';
+import { Dropdown } from 'semantic-ui-react';
 
 const Selection = props => {
   // console.log(props.allBeer)
@@ -15,11 +15,12 @@ const Selection = props => {
   }
 
   return(
-    <div style={{margin: "50px auto", width: "500px"}}>
-      
+    <div style={{ margin: "50px 0" }}>
+      <p>Simply choose your favorite IPA</p>
+      <label className='input-label'>https://areumjo-api-ipa.herokuapp.com/beer/</label>
       <Dropdown
         placeholder='Select Beer'
-        fluid
+        floating
         search
         selection
         options={selectBeer}

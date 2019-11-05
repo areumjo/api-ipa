@@ -5,7 +5,7 @@ const JsonCompo = props => {
   const api = props.apiState[0];
   
   return(
-    <div>
+    <div className="box">
       {/* <p>name: {api.name}</p>
       <p>brewary: {api.brewary}</p>
       <p>family: {api.family}</p> */}
